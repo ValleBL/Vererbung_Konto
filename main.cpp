@@ -86,7 +86,7 @@ Konto::Konto()
 
 Konto::~Konto()
 {
-    cout << "Klasse Objekt abgebaut." << endl;
+    cout << "Klasse Konto abgebaut." << endl;
 }
 
 Sparkonto::Sparkonto()
@@ -143,7 +143,7 @@ void Sparkonto::setstand()
 
 void Girokonto::setstand()
 {
-    if(getStand() > 0)
+    if(getStand() < 0)
     {
         float p;
         p = getStand() * (sollzins / 100); //Zinsberechnung
@@ -181,7 +181,7 @@ void Girokonto::Stand_aendern()
         cout << "Fehler bei Eingabe." << endl;
     }
     cout << "-------------------------------------" << endl;
-    cout << "Neuer Kontostand: " << getStand();
+    cout << "Kontostand: " << getStand();
 }
 
 int main()
