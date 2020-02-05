@@ -32,6 +32,7 @@ Girokonto
 ---------------------------
 + Stand_aendern(): void
 + setstand(): void
++ setzins(sz: float): void
 ---------------------------
 */
 
@@ -75,6 +76,7 @@ class Girokonto : public Konto
         Girokonto();
         void Stand_aendern();
         void setstand();
+        void setzins(float sz);
 };
 
 Konto::Konto()
@@ -132,6 +134,11 @@ double Konto::getStand()
 void Sparkonto::setzins(float hz)
 {
     habenzins = hz;
+}
+
+void Girokonto::setzins(float sz)
+{
+    sollzins = sz;
 }
 
 void Sparkonto::setstand()
@@ -199,6 +206,7 @@ int main()
     ValentinGirokonto.setInhaber("Valentin");
     ValentinGirokonto.setNummer(1234);
     ValentinGirokonto.setStand(-500);
+    ValentinGirokonto.setzins(20);
     ValentinGirokonto.setstand();
     ValentinGirokonto.display();
 
