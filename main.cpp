@@ -181,7 +181,7 @@ void Girokonto::Stand_aendern()
         cout << "Fehler bei Eingabe." << endl;
     }
     cout << "-------------------------------------" << endl;
-    cout << "Kontostand: " << getStand();
+    cout << "Kontostand: " << getStand() << endl;
 }
 
 int main()
@@ -198,7 +198,8 @@ int main()
     Girokonto ValentinGirokonto;
     ValentinGirokonto.setInhaber("Valentin");
     ValentinGirokonto.setNummer(1234);
-    ValentinGirokonto.setStand(10000);
+    ValentinGirokonto.setStand(-500);
+    ValentinGirokonto.setstand();
     ValentinGirokonto.display();
 
     ValentinGirokonto.Stand_aendern();
